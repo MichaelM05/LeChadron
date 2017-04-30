@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/Recognition.php';
+include_once 'Data.php';
+include_once './Domain/Recognition.php';
 
 class RecognitionData extends Data {
 
@@ -63,7 +63,7 @@ class RecognitionData extends Data {
         mysqli_close($conn);
         $recognitions = [];
         while ($row = mysqli_fetch_array($result)) {
-            $currentRecognition = new Recognition($row['idtbrecognition'], $row['nameRecognition'], 
+            $currentRecognition = new Recognition($row['idtbrecognition'], $row['namerecognition'], 
                     $row['descriptionrecognition'], $row['imagerecognition']);
             array_push($recognitions, $currentRecognition);
         }

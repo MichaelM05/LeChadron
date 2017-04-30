@@ -23,7 +23,7 @@ class Data {
                 break;
             case "Michael": //Michael's PC
                 $this->isActive = false;
-                $this->server = "127.0.0.1";
+                $this->server = "localhost";
                 $this->user = "root";
                 $this->password = "";
                 $this->db = "lechaudron";

@@ -1,7 +1,7 @@
 <?php 
 
-include_once 'data.php';
-include '../Domain/UserAdmin.php';
+include_once 'Data.php';
+include './Domain/UserAdmin.php';
 
 class UserAdminData extends Data {
 

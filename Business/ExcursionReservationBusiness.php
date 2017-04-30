@@ -1,6 +1,6 @@
 <?php
 
-include '../data/ExcursionReservationData.php';
+include_once '../Data/ExcursionReservationData.php';
 
 class ExcursionReservationBusiness {
 

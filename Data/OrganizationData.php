@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/Organization.php';
+include_once 'Data.php';
+include_once './Domain/Organization.php';
 
 class OrganizationData extends Data {
 

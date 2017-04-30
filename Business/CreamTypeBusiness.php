@@ -1,6 +1,6 @@
 <?php
 
-include '../data/CreamTypeData.php';
+include_once '../Data/CreamTypeData.php';
 
 class CreamTypeBusiness {
 

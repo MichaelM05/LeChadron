@@ -1,6 +1,6 @@
 <?php
 
-include '../data/RecognitionData.php';
+include_once './Data/RecognitionData.php';
 
 class RecognitionBusiness {
 

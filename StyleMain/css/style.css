@@ -227,9 +227,9 @@ textarea {
 }
 /* section title style */
 .section-title-box h1{
-    font-size: 80px;
-    font-weight: 300;
-    font-family: 'Great Vibes', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    font-family: Arial, sans-serif;
     color: #c59b5f;
     margin: 0;
     padding:0;
@@ -438,9 +438,9 @@ body .navbar-default .navbar-brand{
     padding: 0;
     outline: none;
     display: inline-block;
-    font-size: 80px;
-    font-weight: 300;
-    font-family: 'Great Vibes', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: Arial, sans-serif;
     color: #c59b5f;
     height: auto;
     margin-top: 60px;
@@ -2886,7 +2886,7 @@ nav ul.pagination  li a:hover{
     margin: 0 auto;
     top: 46%;
 	font-family: 'Great Vibes', Arial, sans-serif;
-	font-size:50px;
+	font-size:30px;
 	color: #fff;
 	letter-spacing: 0.2em;
 }

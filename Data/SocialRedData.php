@@ -1,7 +1,7 @@
 <?php 
 
-include_once 'data.php';
-include '../Domain/SocialRed.php';
+include_once 'Data.php';
+include './Domain/SocialRed.php';
 
 class SocialRedData extends Data {
 
@@ -63,7 +63,7 @@ class SocialRedData extends Data {
         mysqli_close($conn);
         $socialReds = [];
         while ($row = mysqli_fetch_array($result)) {
-            $currentSocialRed = new SocialRed($row['idtbsocialred'], $row['nameSocialRed'], 
+            $currentSocialRed = new SocialRed($row['idtbsocialred'], $row['socialred'], 
                     $row['namesocialred'], $row['urlsocialred']);
             array_push($socialReds, $currentSocialRed);
         }

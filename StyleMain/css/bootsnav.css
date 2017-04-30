@@ -1311,7 +1311,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         display: block;
         background: #fff;
         z-index: 99;
-        width: 280px;
+        width: 200px;
         height: 100% !important;
         left: -280px;
         top: 0;
@@ -1328,7 +1328,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
     
     nav.navbar.bootsnav.navbar-mobile ul.nav{
-        width: 293px;
+        width: 200px;
         padding-right: 0;
         padding-left: 15px;
     }

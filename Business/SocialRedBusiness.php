@@ -1,6 +1,6 @@
 <?php
 
-include '../data/SocialRedData.php';
+include_once './Data/SocialRedData.php';
 
 class SocialRedBusiness {
 

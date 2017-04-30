@@ -1,6 +1,6 @@
 <?php
 
-include '../data/ImageProductData.php';
+include_once '../Data/ImageProductData.php';
 
 class ImageProductBusiness {
 

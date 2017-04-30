@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/CreamType.php';
+include_once 'Data.php';
+include './Domain/CreamType.php';
 
 class CreamTypeData extends Data {
 

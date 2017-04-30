@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/Product.php';
+include_once 'Data.php';
+include './Domain/Product.php';
 
 class ProductData extends Data {
 
@@ -60,12 +60,15 @@ class ProductData extends Data {
         $conn = mysqli_connect($this->server, $this->user, $this->password, $this->db);
         $conn->set_charset('utf8');
 
-        $querySelect = "SELECT * FROM tbproduct;";
+        $querySelect = "SELECT pr.idtbproduct, pr.nameproduct, pr.descriptionproduct, crt.creamtype,"
+                . " cht.cheesetype FROM tbproduct pr INNER join tbcheesetype "
+                . "cht on pr.cheesetype = cht.idtbcheesetype inner join tbcreamtype "
+                . "crt on pr.creamtype = crt.idtbcreamtype;";
         $result = mysqli_query($conn, $querySelect);
         mysqli_close($conn);
         $products = [];
         while ($row = mysqli_fetch_array($result)) {
-            $currentProduct = new Product($row['idtbproduct'], $row['nameProduct'], 
+            $currentProduct = new Product($row['idtbproduct'], $row['nameproduct'], 
                     $row['descriptionproduct'], $row['creamtype'], 
                     $row['cheesetype']);
             array_push($products, $currentProduct);

@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/SalesTrade.php';
+include_once 'Data.php';
+include './Domain/SalesTrade.php';
 
 class SalesTradeData extends Data {
 

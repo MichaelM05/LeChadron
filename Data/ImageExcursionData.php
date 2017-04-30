@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/ImageExcursion.php';
+include_once 'Data.php';
+include './Domain/ImageExcursion.php';
 
 class ImageExcursionData extends Data {
 

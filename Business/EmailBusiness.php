@@ -1,6 +1,6 @@
 <?php
 
-include '../data/EmailData.php';
+include_once './Data/EmailData.php';
 
 class EmailBusiness {
 

@@ -1,6 +1,6 @@
 <?php
 
-include '../data/CheeseTypeData.php';
+include_once './Data/CheeseTypeData.php';
 
 class CheeseTypeBusiness {
 

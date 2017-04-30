@@ -1,6 +1,6 @@
 <?php
 
-include '../data/UserAdminData.php';
+include_once '../Data/UserAdminData.php';
 
 class UserAdminBusiness {
 

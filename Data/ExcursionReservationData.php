@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/ExcursionReservation.php';
+include_once 'Data.php';
+include './Domain/ExcursionReservation.php';
 
 class ExcursionReservationData extends Data {
 

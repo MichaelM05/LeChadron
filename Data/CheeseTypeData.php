@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/CheeseType.php';
+include_once 'Data.php';
+include './Domain/CheeseType.php';
 
 class CheeseTypeData extends Data {
 

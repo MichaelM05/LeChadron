@@ -1,6 +1,6 @@
 <?php
 
-include '../data/SalesFairData.php';
+include_once './Data/SalesFairData.php';
 
 class SalesFairBusiness {
 

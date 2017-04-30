@@ -1,7 +1,7 @@
 <?php
 
-include_once 'data.php';
-include '../Domain/ImageGallery.php';
+include_once 'Data.php';
+include './Domain/ImageGallery.php';
 
 class ImageGalleryData extends Data {
 

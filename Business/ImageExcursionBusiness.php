@@ -1,6 +1,6 @@
 <?php
 
-include '../data/ImageExcursionData.php';
+include_once '../Data/ImageExcursionData.php';
 
 class ImageExcursionBusiness {
 
