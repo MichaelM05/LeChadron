@@ -227,7 +227,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-title-box  col-md-6 col-md-offset-3">
-                            <h1>Recomendaciones</h1><!-- title -->
+                            <h1>Reconocimientos</h1><!-- title -->
                             <span class="title-divider"><i class="fa fa-cutlery" aria-hidden="true"></i> </span>
                         </div><!-- end of /.section title box -->
                     </div><!-- end of /.row -->
