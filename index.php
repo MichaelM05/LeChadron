@@ -46,15 +46,15 @@
             <nav class="navigation-section navbar navbar-default bootsnav">
                 <div class="container">
                     <!-- Start Header Navigation -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html"><?php echo $organization[0]->getNameOrganization(); ?></a>
+                    <div class="navbar-header">                        
+                        <a class="navbar-brand" href="index.php"><?php echo $organization[0]->getNameOrganization(); ?></a>
+                        <div id="google_translate_element" style="margin-top: 53px;"></div><script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');                                 
+                                }
+                                </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                     </div>
+                    
                     <!-- End Header Navigation -->
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,6 +67,7 @@
                             <li><a href="#fair">Ferias</a></li>
                             <li><a href="#excursion">Excursión</a></li>
                             <li><a href="#contact">Contacto</a></li>
+                            <li></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
@@ -192,7 +193,7 @@
                             <?php
                             foreach ($cheseeType as $currentType) {
                                 ?>
-                                <li class="button milestone-counter" data-category="<?php echo str_replace(' ','',$currentType->getCheeseType()); ?>"><?php echo $currentType->getCheeseType(); ?></li>
+                                <li class="button milestone-counter" data-category="<?php echo str_replace(' ', '', $currentType->getCheeseType()); ?>"><?php echo $currentType->getCheeseType(); ?></li>
                                 <?php
                             }
                             ?>
@@ -204,13 +205,13 @@
                             <?php
                             foreach ($product as $currentProduct) {
                                 ?>
-                                <div class="menu-items col-sm-3 <?php echo str_replace(' ','',$currentProduct->getCheeseType()); ?>" data-category="transition">
+                                <div class="menu-items col-sm-3 <?php echo str_replace(' ', '', $currentProduct->getCheeseType()); ?>" data-category="transition">
                                     <a href="StyleMain/images/menu/menu-1.jpg" data-gal="prettyPhoto[gallery1]">
                                         <img src="StyleMain/images/menu/menu-1.jpg" width="270" height="270" alt="">
                                         <div class="menu-item">
-                                            <h2><?php echo $currentProduct->getNameProduct(); ?></h2>
-                                            <h3><?php echo $currentProduct->getCreamType(); ?></h3>                                        
-                                        </div>
+                                            <h2><?php echo $currentProduct->getNameProduct(); ?></h2> 
+                                            <h4><?php echo $currentProduct->getCreamType(); ?></h4>
+                                        </div>                                                                               
                                     </a>
                                 </div>
 
@@ -494,7 +495,7 @@
                             <div class="col-md-12 copyright">
                                 <p><?php echo $organization[0]->getNameOrganization(); ?></p>
                                 <button style="color: #000;" onclick="return modalSelectDevelo('Michael Meléndez Mesén',
-                                                'Joseph Cordero Marín');
+                                            'Joseph Cordero Marín');
                                         "type="button" class="btn btn-main"
                                         data-toggle="modal" data-target="#myModal2">
                                     TCU 563 Universidad de Costa Rica <br> Sede del Atlántico</button>
@@ -552,14 +553,14 @@
             <!-- MAP -->
             <script src="StyleMain/js/map.js"></script>
             <script>
-                function modalSelect(modalMessage, modalTitle) {
-                    document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
-                    document.getElementsByClassName("text")[0].textContent = modalMessage;
-                }
-                function modalSelectDevelo(name1, name2) {
-                    document.getElementsByClassName("Desa1")[0].textContent = name1;
-                    document.getElementsByClassName("Desa2")[0].textContent = name2;
-                }
+                                function modalSelect(modalMessage, modalTitle) {
+                                    document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
+                                    document.getElementsByClassName("text")[0].textContent = modalMessage;
+                                }
+                                function modalSelectDevelo(name1, name2) {
+                                    document.getElementsByClassName("Desa1")[0].textContent = name1;
+                                    document.getElementsByClassName("Desa2")[0].textContent = name2;
+                                }
             </script> 
     </body>
 

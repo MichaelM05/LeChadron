@@ -453,7 +453,7 @@ body .navbar-default .navbar-brand{
     margin-left: 0 !important;
 }
 .navigation-section.fixed .navbar-brand {
-    font-size: 45px;
+    font-size: 25px;
     margin-top: 25px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -465,7 +465,8 @@ ul.nav{
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: relative;    
+    
 }
 ul.nav:before{
     width: 100%;

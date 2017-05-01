@@ -28,6 +28,13 @@ class Data {
                 $this->password = "";
                 $this->db = "lechaudron";
                 break;
+            default: //Hosting
+                $this->isActive = false;
+                $this->server = "mysql.hostinger.es";
+                $this->user = "u238369579_lecha";
+                $this->password = "lechaudron";
+                $this->db = "u238369579_lecha";
+                break;
         }
     }
 
