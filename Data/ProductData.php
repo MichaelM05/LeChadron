@@ -17,7 +17,7 @@ class ProductData extends Data {
         if ($row = mysqli_fetch_row($idCont)) {
             $nextId = trim($row[0]) + 1;
         }
-        
+
         $queryInsert = "INSERT INTO tbproduct VALUES (" . $nextId . ",'" .
                 $product->getNameProduct() . "','" .
                 $product->getDescriptionProduct() . "'," .
@@ -32,7 +32,7 @@ class ProductData extends Data {
     public function updateTBProduct($product) {
         $conn = mysqli_connect($this->server, $this->user, $this->password, $this->db);
         $conn->set_charset('utf8');
-        $queryUpdate = "UPDATE tbproduct SET " . 
+        $queryUpdate = "UPDATE tbproduct SET " .
                 "nameproduct='" . $product->getNameProduct() .
                 "', descriptionproduct='" . $product->getDescriptionProduct() .
                 "', creamtype=" . $product->getCreamType() .
@@ -68,12 +68,28 @@ class ProductData extends Data {
         mysqli_close($conn);
         $products = [];
         while ($row = mysqli_fetch_array($result)) {
-            $currentProduct = new Product($row['idtbproduct'], $row['nameproduct'], 
-                    $row['descriptionproduct'], $row['creamtype'], 
-                    $row['cheesetype']);
+            $currentProduct = new Product($row['idtbproduct'], $row['nameproduct'], $row['descriptionproduct'], $row['creamtype'], $row['cheesetype']);
             array_push($products, $currentProduct);
         }
         return $products;
     }
-    
+
+    public function getProductById($id) {
+        $conn = mysqli_connect($this->server, $this->user, $this->password, $this->db);
+        $conn->set_charset('utf8');
+
+        $querySelect = "SELECT pr.idtbproduct, pr.nameproduct, pr.descriptionproduct, crt.creamtype,"
+                . " cht.cheesetype FROM tbproduct pr INNER join tbcheesetype "
+                . "cht on pr.cheesetype = cht.idtbcheesetype inner join tbcreamtype "
+                . "crt on pr.creamtype = crt.idtbcreamtype where pr.idtbproduct = " .
+                $id . ";";
+        $result = mysqli_query($conn, $querySelect);
+        mysqli_close($conn);
+        $row = mysqli_fetch_array($result);
+        $currentProduct = new Product($row['idtbproduct'],
+                $row['nameproduct'], $row['descriptionproduct'],
+                $row['creamtype'], $row['cheesetype']);
+        return $currentProduct;
+    }
+
 }

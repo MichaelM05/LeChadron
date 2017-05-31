@@ -61,11 +61,11 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right" id="top-menu">
                             <li class="active"><a href="#home">Inicio</a></li>
-                            <li><a href="#about">Acerca de</a></li>
+                            <li><a href="#about">Nosotros</a></li>
                             <li><a href="#menu">Productos</a></li>
                             <li><a href="#review">Reconocimientos</a></li>                       
-                            <li><a href="#fair">Ferias</a></li>
-                            <li><a href="#excursion">Excursión</a></li>
+                            <li><a href="#fair">Puntos de venta</a></li>
+                            <li><a href="#excursion">Tour</a></li>
                             <li><a href="#contact">Contacto</a></li>
                             <li></li>
                         </ul>
@@ -143,42 +143,6 @@
                 </div><!-- end of /.container -->
             </div><!-- end of /.about section -->
 
-            <div id="services" class="section service-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title-box  col-md-6 col-md-offset-3">
-                            <h1>Nosotros</h1>
-                            <span class="title-divider">
-                                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                            </span>
-                        </div><!-- end about caption -->
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="best-service text-center">
-                                <div class="best-service-img">
-                                    <i class="fa fa-flag" aria-hidden="true"></i>
-                                </div>
-                                <h4>Misión</h4>
-                                <p>
-                                    <?php echo $organization[0]->getMission(); ?>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="best-service text-center">
-                                <div class="best-service-img">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                </div>
-                                <h4>Visión</h4>
-                                <p>
-                                    <?php echo $organization[0]->getVission(); ?>
-                                </p>
-                            </div>
-                        </div>                        
-                    </div><!-- end .row -->
-                </div><!-- end .container -->
-            </div>
             <div class="section menu-section" id="menu">
                 <div class="container">
                     <div class="row">
@@ -197,7 +161,6 @@
                                 <?php
                             }
                             ?>
-
                         </ul>
                     </div>
                     <div class="row">
@@ -206,24 +169,23 @@
                             foreach ($product as $currentProduct) {
                                 ?>
                                 <div class="menu-items col-sm-3 <?php echo str_replace(' ', '', $currentProduct->getCheeseType()); ?>" data-category="transition">
-                                    <a href="StyleMain/images/menu/menu-1.jpg" data-gal="prettyPhoto[gallery1]">
+                                    <a href="./ProductDetail.php?id=<?php echo $currentProduct->getIdProduct(); ?>">
                                         <img src="StyleMain/images/menu/menu-1.jpg" width="270" height="270" alt="">
                                         <div class="menu-item">
                                             <h2><?php echo $currentProduct->getNameProduct(); ?></h2> 
-                                            <h4><?php echo $currentProduct->getCreamType(); ?></h4>
+                                            <h4><?php echo $currentProduct->getCreamType(); ?> - 
+                                            <?php echo $currentProduct->getCheeseType(); ?></h4>
                                         </div>                                                                               
                                     </a>
                                 </div>
-
                                 <?php
                             }
                             ?>
-
                         </div>                       
                     </div>
                 </div><!-- end of /.container -->
             </div><!-- end of /.menu section -->
-
+            
             <div class="section testimonial-box"  id="review">
                 <div class="container">
                     <div class="row">
@@ -259,7 +221,7 @@
             </div>
 
 
-            <div class="section team-section" id="team">
+            <div class="section team-section" id="fair">
                 <div class="container">
                     <div class="row">
                         <div class="about-caption section-title-box col-md-6 col-md-offset-3">
@@ -267,41 +229,30 @@
                             <span class="title-divider">
                                 <i class="fa fa-cutlery" aria-hidden="true"></i>
                             </span>
-                            <p>Nuestros productos están disponibles en todas las tiendas de las siguientes cadenas:</p>
+                            <p>Nuestros productos están disponibles en los siguientes puntos
+                                de venta:</p>
                         </div><!-- end about caption -->
                     </div><!-- end of /.row -->
                     <div class="row">
                         <?php
                         foreach ($salesTrade as $currentSale) {
                             ?>
-                            <div class="col-md-3 col-sm-6 col-md-offset-1">
+                            <div class="col-md-4 col-sm-6">
                                 <div class="about-profile">
-                                    <img src="StyleMain/images/salesTrade/<?php echo $currentSale->getImagePathSalesTrade(); ?>"
-                                         width="270" height="270" alt="">
+                                    <div class="best-service-img">
+                                        <img src="StyleMain/images/salesTrade/<?php echo $currentSale->getImagePathSalesTrade(); ?>"
+                                             width="270" height="270" alt="">
+                                    </div>
                                     <div class="profile-details">
                                         <h2><?php echo $currentSale->getNameSalesTrade(); ?></h2>
                                     </div>
                                 </div>
                             </div>
-
                             <?php
                         }
                         ?>
                     </div>
-                </div><!-- end of /.container -->
-            </div><!-- end of /.about section -->
-
-            <div class="section service-section" id="fair">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title-box  col-md-6 col-md-offset-3">
-                            <h1>Ferias</h1>
-                            <span class="title-divider">
-                                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                            </span>
-                            <p>Estamos presentes, con la gama completa de nuestros productos, en las siguientes ferias:</p>
-                        </div><!-- end about caption -->
-                    </div>
+                    <br>
                     <div class="row">
                         <?php
                         foreach ($salesFair as $currentFair) {
@@ -326,13 +277,14 @@
                         }
                         ?>
                     </div><!-- end .row -->
-                </div><!-- end .container -->
-            </div>
+                </div><!-- end of /.container -->
+            </div><!-- end of /.about section -->
+
             <div class="section about-section" id="excursion">
                 <div class="container">
                     <div class="row">
                         <div class="about-caption section-title-box col-md-6 col-md-offset-3">
-                            <h1>Excursión</h1>
+                            <h1>Tour</h1>
                             <span class="title-divider">
                                 <i class="fa fa-cutlery" aria-hidden="true"></i>                               
                             </span>

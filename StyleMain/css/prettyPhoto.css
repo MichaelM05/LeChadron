@@ -51,7 +51,7 @@
 	
 	div.pp_default .pp_close:hover, div.pp_default .pp_nav .pp_play:hover, div.pp_default .pp_nav .pp_pause:hover, div.pp_default .pp_arrow_next:hover, div.pp_default .pp_arrow_previous:hover { opacity:0.7; }
 
-	div.pp_default .pp_description{ font-size: 11px; font-weight: bold; line-height: 14px; margin: 5px 50px 5px 0; }
+	div.pp_default .pp_description{ font-size: 12px; font-weight: normal; line-height: 14px; margin: 5px 50px 5px 0; }
 
 	div.pp_default .pp_bottom .pp_left { background: url(../images/prettyPhoto/default/sprite.png) -78px -127px no-repeat; } /* Bottom left corner */
 	div.pp_default .pp_bottom .pp_middle { background: url(../images/prettyPhoto/default/sprite_x.png) bottom left repeat-x; } /* Bottom pattern/color */
@@ -327,9 +327,7 @@
 					margin: 0;
 				}
 				
-				.pp_social { float: left; margin: 0; }
-				.pp_social .facebook { float: left; margin-left: 5px; width: 55px; overflow: hidden; }
-				.pp_social .twitter { float: left; }
+				
 				
 				.pp_nav {
 					clear: right;

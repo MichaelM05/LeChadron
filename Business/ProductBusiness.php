@@ -26,4 +26,8 @@ class ProductBusiness {
         return $this->productData->getAllTBProduct();
     }
     
+    public function getProductById($id) {
+        return $this->productData->getProductById($id);
+    }
+    
 }
