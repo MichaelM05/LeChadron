@@ -30,7 +30,7 @@
             <script src="StyleMain/js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
         <?php
-        include_once './Business/InstancesIndex.php';
+        include_once 'Business/InstancesIndex.php';
         ?>
     </head>
     <body>
@@ -49,12 +49,12 @@
                     <div class="navbar-header">                        
                         <a class="navbar-brand" href="index.php"><?php echo $organization[0]->getNameOrganization(); ?></a>
                         <div id="google_translate_element" style="margin-top: 53px;"></div><script type="text/javascript">
-                                function googleTranslateElementInit() {
-                                    new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');                                 
-                                }
-                                </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                            }
+                        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                     </div>
-                    
+
                     <!-- End Header Navigation -->
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -174,7 +174,7 @@
                                         <div class="menu-item">
                                             <h2><?php echo $currentProduct->getNameProduct(); ?></h2> 
                                             <h4><?php echo $currentProduct->getCreamType(); ?> - 
-                                            <?php echo $currentProduct->getCheeseType(); ?></h4>
+                                                <?php echo $currentProduct->getCheeseType(); ?></h4>
                                         </div>                                                                               
                                     </a>
                                 </div>
@@ -185,7 +185,7 @@
                     </div>
                 </div><!-- end of /.container -->
             </div><!-- end of /.menu section -->
-            
+
             <div class="section testimonial-box"  id="review">
                 <div class="container">
                     <div class="row">
@@ -204,7 +204,7 @@
                                     foreach ($recognition as $currentRecognition) {
                                         ?>
                                         <div class="item">
-                                            <img src="StyleMain/images/client1.png" width="130" height="130" alt="">
+                                            <img src="Resources/ImagesRecognition/<?php echo $currentRecognition->getImageRecognition();?>" width="130" height="130" alt="">
                                             <div class="testimonial-caption">  
                                                 <h4> <?php echo $currentRecognition->getNameRecognition() ?></h4>
                                                 <p> <?php echo $currentRecognition->getDescriptionRecognition(); ?></p><!-- staf caption -->
@@ -447,7 +447,7 @@
                             <div class="col-md-12 copyright">
                                 <p><?php echo $organization[0]->getNameOrganization(); ?></p>
                                 <button style="color: #000;" onclick="return modalSelectDevelo('Michael Meléndez Mesén',
-                                            'Joseph Cordero Marín');
+                                        'Joseph Cordero Marín');
                                         "type="button" class="btn btn-main"
                                         data-toggle="modal" data-target="#myModal2">
                                     TCU 563 Universidad de Costa Rica <br> Sede del Atlántico</button>
@@ -457,21 +457,20 @@
                 </div><!-- end of /.footer section -->
             </div><!-- END OF /. WRAPPER -->
             <!--Modal desarrolladores-->
-            <div class="modal fade" id="myModal2" role="dialog" style="margin-top: 200px;">
+            <div class="modal fade" id="myModal2" role="dialog" style="margin-top: 220px;">
                 <div class="modal-dialog">    
                     <!-- Modal content-->
                     <div class="modal-content">
-                        <div class="modal-header bg-dark">
+                        <div class="modal-header">
                             <h4 class="modal-title">Desarrolladores:</h4>
                         </div>
-                        <div class="modal-body bg-dark">
+                        <div class="modal-body">
                             <ul>
-                                <li><a style="color: #000;" class="Desa1" href="https://www.facebook.com/michael.melendezm?fref=grp_mmbr_list"></a></li>
-                                <li><a style="color: #000;" class="Desa2" href="https://www.facebook.com/joseph.cordero.94?fref=grp_mmbr_list"></a></li>
+                                <li><a class="Desa1" href="https://www.facebook.com/michael.melendezm?fref=grp_mmbr_list"></a></li>
+                                <li><a  class="Desa2" href="https://www.facebook.com/joseph.cordero.94?fref=grp_mmbr_list"></a></li>
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- JQUERY -->
@@ -505,14 +504,14 @@
             <!-- MAP -->
             <script src="StyleMain/js/map.js"></script>
             <script>
-                                function modalSelect(modalMessage, modalTitle) {
-                                    document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
-                                    document.getElementsByClassName("text")[0].textContent = modalMessage;
-                                }
-                                function modalSelectDevelo(name1, name2) {
-                                    document.getElementsByClassName("Desa1")[0].textContent = name1;
-                                    document.getElementsByClassName("Desa2")[0].textContent = name2;
-                                }
+                            function modalSelect(modalMessage, modalTitle) {
+                                document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
+                                document.getElementsByClassName("text")[0].textContent = modalMessage;
+                            }
+                            function modalSelectDevelo(name1, name2) {
+                                document.getElementsByClassName("Desa1")[0].textContent = name1;
+                                document.getElementsByClassName("Desa2")[0].textContent = name2;
+                            }
             </script> 
     </body>
 

@@ -214,14 +214,14 @@
         <!-- MAP -->
         <script src="StyleMain/js/map.js"></script>
         <script>
-                            function modalSelect(modalMessage, modalTitle) {
-                                document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
-                                document.getElementsByClassName("text")[0].textContent = modalMessage;
-                            }
-                            function modalSelectDevelo(name1, name2) {
-                                document.getElementsByClassName("Desa1")[0].textContent = name1;
-                                document.getElementsByClassName("Desa2")[0].textContent = name2;
-                            }
+            function modalSelect(modalMessage, modalTitle) {
+                document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
+                document.getElementsByClassName("text")[0].textContent = modalMessage;
+            }
+            function modalSelectDevelo(name1, name2) {
+                document.getElementsByClassName("Desa1")[0].textContent = name1;
+                document.getElementsByClassName("Desa2")[0].textContent = name2;
+            }
         </script> 
     </body>
 
