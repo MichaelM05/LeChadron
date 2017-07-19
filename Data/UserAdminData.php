@@ -70,4 +70,23 @@ class UserAdminData extends Data {
         return $userAdmins;
     }
     
+    function login($userName, $password) {
+        $conn = mysqli_connect($this->server, $this->user, $this->password, $this->db);
+        $conn->set_charset('utf8');
+
+        $result = mysqli_query($conn, "select * from tbuseradmin where"
+                . " nameuseradmin = '" . $userName . "' and passworduseradmin = '"
+                . $password . "';");
+
+        mysqli_close($conn);
+        
+        $count = mysqli_num_rows($result);
+
+        if ($count >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }

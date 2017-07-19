@@ -1,3 +1,16 @@
+<?php
+if (@session_start() == false) {
+    session_start();
+    if (!isset($_SESSION["userName"])) {
+        header('location: ./login.php');
+    }
+} else {
+    if (!isset($_SESSION["userName"])) {
+        header('location: ./login.php');
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,18 +61,8 @@
 
                                                     <li>
                                                         <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-                                                        <span class="glyphicon-class">Información genral</span>
+                                                        <span class="glyphicon-class">Información general</span>
                                                     </li>
-
-                                                    <li>
-                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                                        <span class="glyphicon-class">Productos</span>
-                                                    </li>
-
-                                                    <li>
-                                                        <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
-                                                        <span class="glyphicon-class">Imágenes</span>
-                                                    </li>                                                                                                 
 
                                                 </ul>
                                             </div>

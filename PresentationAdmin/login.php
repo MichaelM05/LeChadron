@@ -30,7 +30,7 @@
             <div class="login_wrapper">
                 <div class="animate form login_form">
                     <section class="login_content">
-                        <form id="frmLogin" method="POST" action="indexAdmin.php">
+                        <form id="frmLogin" method="POST" action="../BusinessAdmin/LoginAction.php">
                             <h1>Inicio Sesión</h1>
                             <div>
                                 <input type="text" id="txtUser" name="txtUser" class="form-control" placeholder="Usuario" required="" />
@@ -45,47 +45,6 @@
                             <div class="clearfix"></div>
 
                             <div class="separator">
-                                <p class="change_link">No tienes cuenta?
-                                    <a href="#signup" class="to_register">Crear cuenta </a>
-                                </p>
-
-                                <div class="clearfix"></div>
-                                <br />
-
-                                <div>
-                                    <h1><i class="fa fa-group"></i>Le Chaudron</h1>
-                                    <p>©2017 Le Chaudron</p>
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-                </div>
-
-                <div id="register" class="animate form registration_form">
-                    <section class="login_content">
-                        <form id="frmCreateAccount" method="POST" action="">
-                            <h1>Crear cuenta</h1>
-                            <div>
-                                <input type="text" 
-                                       id="txtUser" name="txtUser" class="form-control" placeholder="Usuario" required="" />
-                            </div>
-                            <div>
-                                <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Correo electrónico" required="" />
-                            </div>
-                            <div>
-                                <input type="password" id="txtPassword" name="txtPassword" class="form-control" placeholder="Contraseña" required="" />
-                            </div>
-                            <div>
-                                <input class="btn btn-default submit" id="btnAcceptCC" name="btnAcceptCC" value="Registarse"/></a>
-                            </div>
-
-                            <div class="clearfix"></div>
-
-                            <div class="separator">
-                                <p class="change_link">Ya tienes cuenta?
-                                    <a href="#signin" class="to_register">Iniciar sesisón</a>
-                                </p>
-
                                 <div class="clearfix"></div>
                                 <br />
 

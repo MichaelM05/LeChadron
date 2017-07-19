@@ -931,6 +931,14 @@ video {
     padding-bottom:0;
     position: relative;
 }
+.about2-section{
+    background: url(../images/IMG_2492.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom:0;
+    position: relative;
+}
 .about-section:before{
     content: "";
     width: 100%;
@@ -1151,9 +1159,9 @@ video {
 
 .menu-section{
     background: #000;
-    background-image: url(../images/menu-lef-bg.png), url(../images/menu-right-bg.png);
+    background-image: url(../images/slider/1.jpg);
     background-repeat: no-repeat;
-    background-position:20px 118px, right 62px;
+    background-position:center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -1919,7 +1927,7 @@ video {
 ******************/
 .contact-section{
     display: block;
-    background: url(../images/contact-bg.jpg) repeat;
+    background: url(../images/IMG_2440.jpg) repeat;
     background-position: center ;
     background-size: cover;
     background-attachment: fixed;

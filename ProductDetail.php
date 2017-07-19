@@ -32,6 +32,7 @@
         <?php
         include_once './Business/InstancesIndex.php';
         $product = $productBusiness->getProductById($_GET['id']);
+        $images = $imagesProductBusiness->getImageByProduct($_GET['id']);
         ?>
     </head>
     <body>
@@ -118,15 +119,15 @@
                             <div id="carousel">
                                 <!-- Wrapper for slides -->
                                 <div id="testimonial-carousel" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <img src="StyleMain/images/slider/1.jpg" width="530" height="330">
-                                    </div><!-- end of /.staf item-->
-                                    <div class="item">
-                                        <img src="StyleMain/images/slider/1.jpg" width="530" height="330">
-                                    </div><!-- end of /.staf item-->
-                                    <div class="item">
-                                        <img src="StyleMain/images/slider/1.jpg" width="530" height="330">
-                                    </div><!-- end of /.staf item-->
+                                    <?php
+                                    foreach ($images as $currentImage) {
+                                        ?>
+                                        <div class="item">
+                                            <img src="./Resources/ImagesProducts/<?php echo $currentImage->getPathImageProduct(); ?>" width="500" height="300">
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
                                 </div><!-- end of /.staf slider container -->
                             </div><!-- end of /.staf slider -->
                         </div>
@@ -214,14 +215,14 @@
         <!-- MAP -->
         <script src="StyleMain/js/map.js"></script>
         <script>
-            function modalSelect(modalMessage, modalTitle) {
-                document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
-                document.getElementsByClassName("text")[0].textContent = modalMessage;
-            }
-            function modalSelectDevelo(name1, name2) {
-                document.getElementsByClassName("Desa1")[0].textContent = name1;
-                document.getElementsByClassName("Desa2")[0].textContent = name2;
-            }
+                            function modalSelect(modalMessage, modalTitle) {
+                                document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
+                                document.getElementsByClassName("text")[0].textContent = modalMessage;
+                            }
+                            function modalSelectDevelo(name1, name2) {
+                                document.getElementsByClassName("Desa1")[0].textContent = name1;
+                                document.getElementsByClassName("Desa2")[0].textContent = name2;
+                            }
         </script> 
     </body>
 

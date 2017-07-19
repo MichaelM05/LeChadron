@@ -1,3 +1,15 @@
+<?php
+if (@session_start() == false) {
+    session_start();
+    if (!isset($_SESSION["userName"])) {
+        header('location: ./login.php');
+    }
+} else {
+    if (!isset($_SESSION["userName"])) {
+        header('location: ./login.php');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,8 +34,9 @@
     </head>
 
     <body class="nav-md">
-        <?php include './reusableMenu.php';
-         include_once '../BusinessAdmin/ValidatePHP.php';
+        <?php
+        include './reusableMenu.php';
+        include_once '../BusinessAdmin/ValidatePHP.php';
         ?>               
         <!-- page content -->
         <div class="right_col" role="main">
@@ -55,18 +68,21 @@
                                                 </li>
                                             </ul>
                                             <div id="myTabContent" class="tab-content">
-                                                <div>
-                                                    <label>Nombre:</label>
-                                                    <input class="form-control" type="text" id="txtNameRecognition" name="txtNameRecognition">
-                                                </div>                                                
-                                                <div>
-                                                    <label>Descripción:</label>
-                                                    <textarea id="txtDescription" name="txtDescription" class="form-control" rows="8" ></textarea>                                                    
+                                                <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+                                                    <div>
+                                                        <label>Nombre:</label>
+                                                        <input class="form-control" type="text" id="txtNameRecognition" name="txtNameRecognition">
+                                                    </div>                                                
+                                                    <div>
+                                                        <label>Descripción:</label>
+                                                        <textarea id="txtDescription" name="txtDescription" class="form-control" rows="8" ></textarea>                                                    
+                                                    </div>
+                                                    <div>
+                                                        <input class="form-control" type="file" id="file" name="file">
+                                                    </div>
+                                                    <input type="hidden" id="createReco" name="createReco" value="createReco"/>
                                                 </div>
-                                                <div>
-                                                    <input class="form-control" type="file" id="file" name="file">
-                                                </div>
-                                                <input type="hidden" id="createReco" name="createReco" value="createReco"/>
+                                                
                                             </div>
                                         </form>
                                     </div>

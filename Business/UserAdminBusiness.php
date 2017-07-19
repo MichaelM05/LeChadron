@@ -26,4 +26,8 @@ class UserAdminBusiness {
         return $this->userAdminData->getAllTBUserAdmin();
     }
     
+    function login($userName, $password) {
+        return $this->userAdminData->login($userName, $password);
+    }
+    
 }

@@ -11,11 +11,10 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="../StyleAdmin/images/img.jpg" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
-                        <span>Bienvenido</span>
-                        <h2>John Doe</h2>
+                        <span>Bienvenido: <?php echo $_SESSION['userName'];?></span>
+                        <h2></h2>
                     </div>
                 </div>
                 <!-- /menu profile quick info -->
@@ -29,13 +28,12 @@
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">                                  
-                                    <li><a href="adminInformationBasic.php">Info general</a></li>
+                                    <li><a href="adminInformationBasic.php">Descripción general</a></li>
                                     <li><a href="adminInformationHistory.php">Historia</a></li>
+                                    <li><a href="#">Tipos de Queso</a></li>
+                                    <li><a href="#">Tipos de Crema</a></li>
+                                    <li><a href="adminInformationProducts.php">Productos</a></li>
                                     <li><a href="adminCreateRecognition.php">Reconocimientos</a></li>
-                                    <li><a href="adminInformationCharacteristics.php">Características</a></li>
-                                    <li><a href="adminInformationProducts.php">Producto</a></li>
-                                    <li><a href="adminInformationVariety.php">Variedad</a></li>
-                                    <li><a href="adminImages.php">Imagenes</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -61,11 +59,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="../StyleAdmin/images/img.jpg" alt="">John Doe
+                                <?php echo $_SESSION['userName'];?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">                                       
-                                <li><a href="login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a href="../BusinessAdmin/UnloginAction.php"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
                             </ul>
                         </li>                             
                     </ul>

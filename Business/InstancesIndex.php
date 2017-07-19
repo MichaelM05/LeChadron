@@ -10,6 +10,8 @@ include_once './Business/SalesFairBusiness.php';
 include_once './Business/SalesTradeBusiness.php';
 include_once './Business/SocialRedBusiness.php';
 include_once './Business/CheeseTypeBusiness.php';
+include_once './Business/ImageGalleryBusiness.php';
+include_once './Business/ImageProductBusiness.php';
 
 $organizationBusiness = new OrganizationBusiness();
 $organization = $organizationBusiness->getAllTBOrganization();
@@ -40,3 +42,8 @@ $socialRed = $socialRedBusiness->getAllTBSocialRed();
 
 $cheeseTypeBusiness = new CheeseTypeBusiness();
 $cheseeType = $cheeseTypeBusiness->getAllTBCheeseType();
+
+$imagesIndexBusiness = new ImageGalleryBusiness();
+$imagesIndex = $imagesIndexBusiness->getAllTBImageGallery();
+
+$imagesProductBusiness = new ImageProductBusiness();

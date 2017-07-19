@@ -77,30 +77,39 @@
             <div class="slider-section" id="home">
                 <!-- START MAIN CONTAINER -->
                 <div id="home-slider" class="owl-carousel" style=" display:block;">
-                    <div class="item">
-                        <div class="slider-items" style="background-image: url(StyleMain/images/slider/1.jpg)">
-                            <div class="slide-item">
-                                <div class="slider-item">
-                                    <h2><span><?php echo $organization[0]->getNameOrganization(); ?></span></h2>
-                                    <span class="slider-divider"></span>
-                                    <p><?php
-                                        $contBI = strlen($organization[0]->getBasicInformation());
-                                        $partBI = $contBI / 2;
-                                        echo substr($organization[0]->getBasicInformation(), 0, $partBI) . '<br>' .
-                                        substr($organization[0]->getBasicInformation(), $partBI, $contBI);
-                                        ?></p>
-                                </div><!-- end of /.slider acption -->
+                    <?php
+                    $flag = 0;
+                    foreach ($imagesIndex as $currentImage) {
+                        if ($flag == 0) {
+                            ?>
+                            <div class="item">
+                                <div class="slider-items" style="background-image: url(StyleMain/images/slider/<?php echo $currentImage->getImageGallery(); ?>)">
+                                    <div class="slide-item">
+                                        <div class="slider-item">
+                                            <h2><span><?php echo $organization[0]->getNameOrganization(); ?></span></h2>
+                                            <span class="slider-divider"></span>
+                                            <p><?php
+                                                $contBI = strlen($organization[0]->getBasicInformation());
+                                                $partBI = $contBI / 2;
+                                                echo substr($organization[0]->getBasicInformation(), 0, $partBI) . '<br>' .
+                                                substr($organization[0]->getBasicInformation(), $partBI, $contBI);
+                                                ?></p>
+                                        </div><!-- end of /.slider acption -->
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="slider-items" style="background-image: url(StyleMain/images/slider/2.jpg)">                           
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="slider-items" style="background-image: url(StyleMain/images/slider/3.jpg)">                           
-                        </div>
-                    </div>
+                            <?php
+                            $flag = 1;
+                        } else {
+                            ?>
+                            <div class="item">
+                                <div class="slider-items" style="background-image: url(StyleMain/images/slider/<?php echo $currentImage->getImageGallery(); ?>)">                           
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
                 </div>
                 <div class="home-navigation">
                     <a class="btn vojon-btn home-next"><i class="fa fa-angle-left"></i></a>
@@ -170,7 +179,10 @@
                                 ?>
                                 <div class="menu-items col-sm-3 <?php echo str_replace(' ', '', $currentProduct->getCheeseType()); ?>" data-category="transition">
                                     <a href="./ProductDetail.php?id=<?php echo $currentProduct->getIdProduct(); ?>">
-                                        <img src="StyleMain/images/menu/menu-1.jpg" width="270" height="270" alt="">
+                                        <?php 
+                                            $images = $imagesProductBusiness->getImageByProduct($currentProduct->getIdProduct());
+                                        ?>
+                                        <img src="./Resources/ImagesProducts/<?php echo $images[0]->getPathImageProduct(); ?>" style="width: 300px; height: 270px;" alt="">
                                         <div class="menu-item">
                                             <h2><?php echo $currentProduct->getNameProduct(); ?></h2> 
                                             <h4><?php echo $currentProduct->getCreamType(); ?> - 
@@ -204,7 +216,7 @@
                                     foreach ($recognition as $currentRecognition) {
                                         ?>
                                         <div class="item">
-                                            <img src="Resources/ImagesRecognition/<?php echo $currentRecognition->getImageRecognition();?>" width="130" height="130" alt="">
+                                            <img src="Resources/ImagesRecognition/<?php echo $currentRecognition->getImageRecognition(); ?>" width="200" height="200" alt="">
                                             <div class="testimonial-caption">  
                                                 <h4> <?php echo $currentRecognition->getNameRecognition() ?></h4>
                                                 <p> <?php echo $currentRecognition->getDescriptionRecognition(); ?></p><!-- staf caption -->
@@ -280,7 +292,7 @@
                 </div><!-- end of /.container -->
             </div><!-- end of /.about section -->
 
-            <div class="section about-section" id="excursion">
+            <div class="section about2-section" id="excursion">
                 <div class="container">
                     <div class="row">
                         <div class="about-caption section-title-box col-md-6 col-md-offset-3">

@@ -1,3 +1,15 @@
+<?php
+if (@session_start() == false) {
+    session_start();
+    if (!isset($_SESSION["userName"])) {
+        header('location: ./login.php');
+    }
+} else {
+    if (!isset($_SESSION["userName"])) {
+        header('location: ./login.php');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
