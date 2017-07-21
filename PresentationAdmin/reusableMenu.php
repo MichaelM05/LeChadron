@@ -30,10 +30,10 @@
                                 <ul class="nav child_menu">                                  
                                     <li><a href="adminInformationBasic.php">Descripción general</a></li>
                                     <li><a href="adminInformationHistory.php">Historia</a></li>
-                                    <li><a href="#">Tipos de Queso</a></li>
-                                    <li><a href="#">Tipos de Crema</a></li>
-                                    <li><a href="adminInformationProducts.php">Productos</a></li>
-                                    <li><a href="adminCreateRecognition.php">Reconocimientos</a></li>
+                                    <li><a href="adminInformationCheeseType.php">Tipos de Queso</a></li>
+                                    <li><a href="adminInformationCreamType.php">Tipos de Crema</a></li>
+                                    <li><a href="adminInformationProduct.php">Productos</a></li>
+                                    <li><a href="adminInformationRecognition.php">Reconocimientos</a></li>
                                 </ul>
                             </li>
                         </ul>

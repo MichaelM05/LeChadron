@@ -7,16 +7,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
-
+          <link rel="icon" href="Resources/logo.PNG" type="image/x-icon">
         <!-- WEBSITE TITLE -->
         <title>Le chaudron</title>
 
-        <!-- FAVICON -->
-        <link rel="icon" href="StyleMain/images/favicon.png">
-        <link rel="icon" href="StyleMain/images/favicon.png" sizes="57x57">
-        <link rel="icon" href="StyleMain/images/favicon.png" sizes="72x72">
-        <link rel="icon" href="StyleMain/images/favicon.png" sizes="114x114">
-        <link rel="icon" href="StyleMain/images/favicon.png" sizes="144x144">
+     
 
         <!--YOUR STYLE -->
         <link rel="stylesheet" href="StyleMain/css/style.css">
@@ -312,40 +307,40 @@
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
 
-                            <form class="reservation-form row" id="reservation-form" action="" name="" method="post">
+                            <form class="reservation-form row" id="reservation-form" action="Business/ExcursionAction.php" name="" method="post">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="InputName" name="InputName" placeholder="Nombre completo" required="required" >
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required="required" >
                                         <i class="fa fa-pencil-square-o"></i>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="number" class="form-control" id="InputPhoneNumber" name="InputPhoneNumber" placeholder="Teléfono" required="required">
+                                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Teléfono" required="required">
                                         <i class="fa fa-phone"></i>
                                     </div> 
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="InputEmail1" name="InputEmail1" placeholder="Correo electrónico" required="required">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required="required">
                                         <i class="fa fa-envelope-o"></i>
                                     </div> 
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="number" class="form-control" id="InputNumberPerson18" name="InputNumberPerson" placeholder="Personas +18" required="required">
+                                        <input type="number" class="form-control" id="numberPerson18" name="numberPerson18" placeholder="Personas +18" required="required">
                                         <i class="fa fa-user"></i>
                                     </div> 
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="number" class="form-control" id="InputNumberPerson12" name="InputNumberPerson" placeholder="Personas -12" required="required">
+                                        <input type="number" class="form-control" id="numberPerson12" name="numberPerson12" placeholder="Personas -12" required="required">
                                         <i class="fa fa-user"></i>
                                     </div> 
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="date" class="form-control" id="InputDate" name="InputDate" placeholder="DATE" required="required">
+                                        <input type="date" class="form-control" id="date" name="date" placeholder="DATE" required="required">
                                         <i class="fa fa-calendar-o"></i>
                                     </div> 
                                 </div>
@@ -414,18 +409,21 @@
                         </div><!-- end of /.row -->
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 contact-box">
-                                <form class="row" id="contact-form" action="" name="contactform" method="post" >
+                                <form action="Business/SmtpAction.php"  method="POST"  class="row" id="contact-form" >
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo" required="true">
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Correo electrónico">
+                                        <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="teléfono" required="true">
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" required="true">
                                     </div>
                                     <div class="form-group col-sm-12">
-                                        <textarea name="comments" class="form-control" id="comments" placeholder="Mensaje"></textarea>
+                                        <textarea name="comments" class="form-control" id="comments" placeholder="Mensaje" required="true"></textarea>
                                     </div>
                                     <div class="col-sm-12">
-                                        <button type="submit" class="vojon-btn message-btn contact-submit" id="submit">Enviar</button>
+                                        <input style="color: #fff;" type="submit" class="vojon-btn message-btn contact-submit" id="submit" value="Enviar" />
                                     </div>
                                 </form><!-- end form -->
                                 <div id="message"></div>
@@ -516,14 +514,14 @@
             <!-- MAP -->
             <script src="StyleMain/js/map.js"></script>
             <script>
-                            function modalSelect(modalMessage, modalTitle) {
-                                document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
-                                document.getElementsByClassName("text")[0].textContent = modalMessage;
-                            }
-                            function modalSelectDevelo(name1, name2) {
-                                document.getElementsByClassName("Desa1")[0].textContent = name1;
-                                document.getElementsByClassName("Desa2")[0].textContent = name2;
-                            }
+                function modalSelect(modalMessage, modalTitle) {
+                    document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
+                    document.getElementsByClassName("text")[0].textContent = modalMessage;
+                }
+                function modalSelectDevelo(name1, name2) {
+                    document.getElementsByClassName("Desa1")[0].textContent = name1;
+                    document.getElementsByClassName("Desa2")[0].textContent = name2;
+                }
             </script> 
     </body>
 

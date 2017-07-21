@@ -12,6 +12,7 @@ include_once './Business/SocialRedBusiness.php';
 include_once './Business/CheeseTypeBusiness.php';
 include_once './Business/ImageGalleryBusiness.php';
 include_once './Business/ImageProductBusiness.php';
+include_once 'ValidatePHP.php';
 
 $organizationBusiness = new OrganizationBusiness();
 $organization = $organizationBusiness->getAllTBOrganization();

@@ -18,7 +18,7 @@ if (@session_start() == false) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" href="../Resources/logo.PNG" type="image/x-icon">
         <title>Le Chaudron</title>
 
         <!-- Bootstrap -->
@@ -82,7 +82,7 @@ if (@session_start() == false) {
                                                     </div>
                                                     <input type="hidden" id="createReco" name="createReco" value="createReco"/>
                                                 </div>
-                                                
+
                                             </div>
                                         </form>
                                     </div>

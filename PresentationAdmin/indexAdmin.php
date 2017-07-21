@@ -19,7 +19,7 @@ if (@session_start() == false) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" href="../Resources/logo.PNG" type="image/x-icon">
         <title>Le Chaudron</title>
 
         <!-- Bootstrap -->
@@ -35,67 +35,67 @@ if (@session_start() == false) {
 
     <body class="nav-md">
         <?php include './reusableMenu.php'; ?>
-                <!-- /top navigation -->
-                <!-- page content -->
-                <div class="right_col" role="main">
-                    <div class="">                       
+        <!-- /top navigation -->
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">                       
 
-                        <div class="clearfix"></div>
+                <div class="clearfix"></div>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Le Chaudron<small></small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>                                         
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Le Chaudron<small></small></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>                                         
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="bs-docs-section">
+                                    <h1 id="glyphicons" class="page-header">Módulo administrativo</h1>
+                                    <div class="bs-glyphicons">
+                                        <ul class="bs-glyphicons-list">
+
+                                            <li>
+                                                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                                                <span class="glyphicon-class">Información general</span>
+                                            </li>
+
                                         </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <div class="bs-docs-section">
-                                            <h1 id="glyphicons" class="page-header">Módulo administrativo</h1>
-                                            <div class="bs-glyphicons">
-                                                <ul class="bs-glyphicons-list">
-
-                                                    <li>
-                                                        <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-                                                        <span class="glyphicon-class">Información general</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /page content -->
-
-                <!-- footer content -->
-                <footer>
-                    <div class="pull-right">
-                        Le Chaudron
-                    </div>
-                    <div class="clearfix"></div>
-                </footer>
-                <!-- /footer content -->
             </div>
         </div>
+        <!-- /page content -->
 
-        <!-- jQuery -->
-        <script src="../StyleAdmin/vendors/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="../StyleAdmin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- FastClick -->
-        <script src="../StyleAdmin/vendors/fastclick/lib/fastclick.js"></script>
-        <!-- NProgress -->
-        <script src="../StyleAdmin/vendors/nprogress/nprogress.js"></script>
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Le Chaudron
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
 
-        <!-- Custom Theme Scripts -->
-        <script src="../StyleAdmin/build/js/custom.min.js"></script>
-    </body>
+<!-- jQuery -->
+<script src="../StyleAdmin/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../StyleAdmin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../StyleAdmin/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../StyleAdmin/vendors/nprogress/nprogress.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../StyleAdmin/build/js/custom.min.js"></script>
+</body>
 </html>

@@ -18,7 +18,7 @@ if (@session_start() == false) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" href="../Resources/logo.PNG" type="image/x-icon">
         <title>Le Chaudron</title>
 
         <!-- Bootstrap -->
@@ -35,7 +35,7 @@ if (@session_start() == false) {
     </head>
 
     <body class="nav-md">
-        <?php 
+        <?php
         include '../BusinessAdmin/ValidatePHP.php';
         include './reusableMenu.php';
         include_once '../BusinessAdmin/CreamTypeBusiness.php';
@@ -73,7 +73,7 @@ if (@session_start() == false) {
                                                 </li>
                                             </ul>
                                             <div id="myTabContent" class="tab-content">
-                                                
+
                                                 <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                                     <label>Tipo de crema:</label>
                                                     <input type="text"  style="width: 90%" name="txtCreamType" id="txtCreamType"/>
@@ -153,10 +153,10 @@ if (@session_start() == false) {
 <!-- Custom Theme Scripts -->
 <script src="../StyleAdmin/build/js/custom.min.js"></script>
 <script>
-    function modalSelect(modalMessage, modalTitle) {
-        document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
-        document.getElementsByClassName("modal-body")[0].textContent = modalMessage;
-    }
+                                                    function modalSelect(modalMessage, modalTitle) {
+                                                        document.getElementsByClassName("modal-title")[0].textContent = modalTitle;
+                                                        document.getElementsByClassName("modal-body")[0].textContent = modalMessage;
+                                                    }
 </script>
 </body>
 </html>

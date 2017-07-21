@@ -18,7 +18,7 @@ if (@session_start() == false) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" href="../Resources/logo.PNG" type="image/x-icon">
         <title>Le Chaudron</title>
 
         <!-- Bootstrap -->
@@ -80,6 +80,8 @@ if (@session_start() == false) {
                                                         <form method="POST" action="../BusinessAdmin/RecognitionAction.php">
                                                             <li><input style="border:none; width: 80%;" type="text" id="txtNameRecognition<?php echo $cont; ?>" name="txtNameRecognition" value="<?php echo $currentRecognition->getNameRecognition(); ?>"/></li>
                                                             <textarea class="form-control text-justify" rows="5" id="txtDescriptionRecognition<?php echo $cont; ?>" name="txtDescriptionRecognition"><?php echo $currentRecognition->getDescriptionRecognition(); ?></textarea>
+                                                            <label>Imagen actual -- Puede mantenerla o cambiarla</label>
+                                                            <img src="../Resources/ImagesRecognition/<?php echo $currentRecognition->getImageRecognition(); ?>" alt="reconocimiento" class="img-responsive" style="width: 200px; height: 200px;"/>
                                                             <input type="file" name="file" />
                                                             <input type="hidden" value="<?php echo $currentRecognition->getImageRecognition(); ?>" name="image" />
                                                             <input type="hidden" name="idRecognition" value="<?php echo $currentRecognition->getIdRecognition(); ?>" />                                           

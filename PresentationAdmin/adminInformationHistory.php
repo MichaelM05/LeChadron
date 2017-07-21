@@ -18,7 +18,7 @@ if (@session_start() == false) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" href="../Resources/logo.PNG" type="image/x-icon">
         <title>Le Chaudron</title>
 
         <!-- Bootstrap -->
@@ -71,10 +71,10 @@ if (@session_start() == false) {
                                             </ul>
                                             <div id="myTabContent" class="tab-content">
                                                 <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
-                                                    <textarea id="txtHistory" name="txtHistory" class="form-control text-justify" rows="15" ><?php echo $organization[0]->getHistory();?></textarea>
+                                                    <textarea id="txtHistory" name="txtHistory" class="form-control text-justify" rows="15" ><?php echo $organization[0]->getHistory(); ?></textarea>
                                                     <input type="hidden" id="history" name="history" value="history"/>
                                                 </div>
-                                                                                                   
+
                                             </div>
                                         </form>
                                     </div>
