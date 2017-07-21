@@ -30,10 +30,10 @@ class Data {
                 break;
             default: //Hosting
                 $this->isActive = false;
-                $this->server = "mysql.hostinger.es";
-                $this->user = "u238369579_lecha";
+                $this->server = "localhost";
+                $this->user = "id2310969_lechaudron";
                 $this->password = "lechaudron";
-                $this->db = "u238369579_lecha";
+                $this->db = "id2310969_lechaudron";
                 break;
         }
     }

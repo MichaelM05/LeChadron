@@ -455,7 +455,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 copyright">
-                                <p><?php echo $organization[0]->getNameOrganization(); ?></p>
+                                <p><a href="PresentationAdmin/login.php"><?php echo $organization[0]->getNameOrganization(); ?></a></p>
                                 <button style="color: #000;" onclick="return modalSelectDevelo('Michael Meléndez Mesén',
                                         'Joseph Cordero Marín');
                                         "type="button" class="btn btn-main"
